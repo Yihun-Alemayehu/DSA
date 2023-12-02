@@ -42,7 +42,7 @@ int main(){
 
 // Recursive way
 
-void reverseArray(int arr[], int start, int end)
+/*void reverseArray(int arr[], int start, int end)
 {
     if (start >= end)
         return;
@@ -69,4 +69,28 @@ int main()
 
     reverseArray(arr, 0, n - 1);
     printArray(arr, n);
+}*/
+
+// String reverse
+
+string reverseString(string &str)
+{
+    int n = str.length();
+    int start = 0;
+    int end = n - 1;
+
+    while (start < end)
+    {
+        swap(str[start], str[end]);
+        start++;
+        end--;
+    }
+    return str;
+}
+
+int main()
+{
+    string str = "remmargorp";
+    reverseString(str);
+    cout << str << endl;
 }
